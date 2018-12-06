@@ -76,13 +76,15 @@ document.addEventListener("keypress", (event) => {
             // Check if user hit the 6 guess limit
             if (wrongLetter.length == 6) {
 
+                document.getElementById("rightLetters").innerHTML = randonTeam;
+
                 // Set timer to show the last letter for the underscore before the alert is displayed
                 setTimeout(myFunction, 100)
 
                 function myFunction() {
 
                     var answer = confirm("Sorry, you lose! Do you want to play again?");
-                    // console.log(answer);
+                    console.log(answer);
 
                     // Reset Game
                     if (answer == true) {
